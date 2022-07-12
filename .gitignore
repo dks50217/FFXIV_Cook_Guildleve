@@ -1,0 +1,15 @@
+python-libs/
+bin/
+*.spec
+*pyc
+*.egg-info
+*html
+build/
+tests/
+dist/
+.DS_Store
+MANIFEST
+*#*
+*.exe
+LICENSE*
+doc/

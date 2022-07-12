@@ -1,0 +1,2 @@
+pyinstaller --onefile --paths="C:\Users\User\AppData\Local\Programs\Python\Python39\Lib\site-packages\cv2" main.py
+python -m PyInstaller --paths="C:\Users\User\AppData\Local\Programs\Python\Python39\Lib\site-packages\cv2" main.spec
