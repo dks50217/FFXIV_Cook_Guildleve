@@ -20,7 +20,7 @@
     {"type":"button","command":"num0","dir":""},
     {"type":"button","command":"num0","dir":""},
     {"type":"button","command":"num0","dir":""},
-    {"type":"image","command":"E.jpg","dir":"right"},
+    {"type":"image","command":"E.jpg","dir":"right", "alt":""},
     {"type":"long","command":"","dir":"left"},
     {"type":"button","command":"num0","dir":""},
     {"type":"button","command":"num0","dir":""},

@@ -8,14 +8,24 @@ import json
 runtime = input("次數: ")
 conf = float(input("信度: "))
 sec = float(input("間隔秒數: "))
-
+isGray = input("啟用灰度匹配 (Y/N): ").upper()
+isGrayscale = False
 
 def locate_click(imgname, alt=None, t=0.1, button="left"):
 
     time.sleep(t)
 
-    img = cv2.imread(imgname) 
-    box = locateOnScreen(img,confidence=conf)
+    img = cv2.imread(imgname)
+    isGrayscale = True if isGray == 'Y' else 'N'
+    # screenwidth,screenheight = size()
+    # screenImg = screenshot()
+    # screen_dpi = int(screenImg.size[0]/screenwidth)
+    # print(screenwidth)
+    # print(screenheight)
+    # print(screen_dpi)
+    # print(isGrayscale)
+
+    box = locateOnScreen(img,confidence=conf, grayscale=isGrayscale)
     print(imgname, "found at:\n\t", box)
 
     if box is None:
@@ -80,5 +90,12 @@ for index in range(0, int(runtime)):
 
     print("done: " + str(index))
     time.sleep(3)
+
+# import sys
+# from control.ctr_main import Ctr_Main
+
+# if __name__ == '__main__':
+#     ctrMain = Ctr_Main()
+#     sys.exit(main())
 
 
